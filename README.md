@@ -25,12 +25,10 @@ Ez a projekt egy Discord bot, amely ellenőrzi az OTP Gépkocsinyeremény betét
    MY_NUMBERS=your_numbers_comma_separated
 
 3. **Docker image építése és futtatása:**
-
- Futtasd a következő parancsot a Docker image építéséhez és a konténer futtatásához:
    
    ```sh
     docker-compose up --build
 
 
-**Megjegyzés:**
+###Megjegyzés:
 A konténer futtatása közben a bot először azonnal elindul, és ellenőrzi a nyerőszámokat. A letöltött PDF fájlokat a downloads mappában tárolja ideiglenesen, majd törli azokat az ellenőrzés után.
