@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  otp-winners-bot:
+    build: .
+    environment:
+      - DISCORD_BOT_TOKEN=${DISCORD_BOT_TOKEN}
+      - DISCORD_CHANNEL_ID=${DISCORD_CHANNEL_ID}
+      - MY_NUMBERS=${MY_NUMBERS}
+    volumes:
+      - ./downloads:/downloads
+    restart: on-failure
+    entrypoint: ["sh", "-c", "python bot.py && crond -f"]
